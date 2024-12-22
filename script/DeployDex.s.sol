@@ -16,9 +16,9 @@ contract DeploymentManager {
 
     constructor(address initialOwner) {
         // Deploy necessary contracts
-        kycRegistry = new KYCRegistry(initialOwner);
-        priceOracle = new PriceOracle(initialOwner);
-        lpToken = new LPToken(initialOwner);
+        kycRegistry = new KYCRegistry(initialOwner); // Pass initialOwner here
+        priceOracle = new PriceOracle(initialOwner); // Assuming PriceOracle requires owner
+        lpToken = new LPToken(initialOwner); // Assuming LPToken requires owner
 
         // Deploy LiquidityPool with dependencies
         liquidityPool = new LiquidityPool(address(priceOracle), address(lpToken), initialOwner);

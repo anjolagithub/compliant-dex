@@ -6,8 +6,8 @@ import {ReentrancyGuard} from "openzeppelin-contracts/contracts/utils/Reentrancy
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 import {Pausable} from "openzeppelin-contracts/contracts/utils/Pausable.sol";
 import {Math} from "openzeppelin-contracts/contracts/utils/math/Math.sol";
-import "./PriceOracle.sol";
-import "./LPToken.sol";
+import "../src/PriceOracle.sol";
+import "../src/LPToken.sol";
 
 contract LiquidityPool is Ownable, ReentrancyGuard, Pausable {
     struct Pool {
